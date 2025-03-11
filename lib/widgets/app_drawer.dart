@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sensors/pages/light_page.dart';
 import 'package:sensors/pages/sensors_chart_page.dart';
+import 'package:sensors/pages/tilt_page.dart';
 
 import '../pages/home_page.dart';
 import '../pages/sensors_plus_page.dart';
@@ -12,6 +13,7 @@ const menu = {
   'Sensors': SensorsPlusPage.new,
   'Sensors Chart': SensorsChartPage.new,
   'Light': LightPage.new,
+  'Tilt': TiltPage.new,
 };
 
 class AppDrawer extends StatelessWidget {
