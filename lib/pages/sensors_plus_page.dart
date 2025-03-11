@@ -16,35 +16,35 @@ class SensorsPlusPage extends StatelessWidget {
       body: ListView(
         children: [
           Header("Accelerometer m/s2"),
-          StreamBuilder(
+          SensorSliders(
             stream: accelerometerEventStream()
                 .map<P3>((e) => (x: e.x, y: e.y, z: e.z)),
-            builder: (context, snapshot) =>
-                SensorSlider(snapshot.data, min: -50, max: 50),
+            min: -50,
+            max: 50,
           ),
           Divider(),
           Header("User Accelerometer m/s2"),
-          StreamBuilder(
+          SensorSliders(
             stream: userAccelerometerEventStream()
                 .map<P3>((e) => (x: e.x, y: e.y, z: e.z)),
-            builder: (context, snapshot) =>
-                SensorSlider(snapshot.data, min: -50, max: 50),
+            min: -50,
+            max: 50,
           ),
           Divider(),
           Header("Gyroscope"),
-          StreamBuilder(
+          SensorSliders(
             stream:
                 gyroscopeEventStream().map<P3>((e) => (x: e.x, y: e.y, z: e.z)),
-            builder: (context, snapshot) =>
-                SensorSlider(snapshot.data, min: -50, max: 50),
+            min: -50,
+            max: 50,
           ),
           Divider(),
           Header('Magnetometer (μT)'),
-          StreamBuilder(
+          SensorSliders(
             stream: magnetometerEventStream()
                 .map<P3>((e) => (x: e.x, y: e.y, z: e.z)),
-            builder: (context, snapshot) =>
-                SensorSlider(snapshot.data, min: -50, max: 50),
+            min: -50,
+            max: 50,
           ),
           //Divider(),
           //Header('Barometer'),
