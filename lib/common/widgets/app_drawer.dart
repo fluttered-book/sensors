@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sensors/pages/light_page.dart';
-import 'package:sensors/pages/tilt_page.dart';
+import 'package:sensors/location/ui/map_page.dart';
 
-import '../../pages/home_page.dart';
+import '../../home_page.dart';
+import '../../light/light_page.dart';
+import '../../location/ui/location_page.dart';
 import '../../sensors/chart/ui/sensors_chart_page.dart';
 import '../../sensors/values/ui/sensors_plus_page.dart';
+import '../../tilt/tilt_page.dart';
 
 // https://docs.flutter.dev/cookbook/design/drawer
 
@@ -14,6 +16,8 @@ const menu = {
   'Sensors Chart': SensorsChartPage.new,
   'Light': LightPage.new,
   'Tilt': TiltPage.new,
+  'Location': LocationPage.new,
+  'Map': MapPage.new,
 };
 
 class AppDrawer extends StatelessWidget {
