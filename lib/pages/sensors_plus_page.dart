@@ -25,8 +25,11 @@ class SensorsPlusPage extends StatelessWidget {
           Divider(),
           Header("User Accelerometer m/s2"),
           SensorSliders(
-            stream: userAccelerometerEventStream()
-                .map<P3>((e) => (x: e.x, y: e.y, z: e.z)),
+            stream: userAccelerometerEventStream().map<P3>((e) => (
+                  x: e.x,
+                  y: e.y,
+                  z: e.z,
+                )),
             min: -50,
             max: 50,
           ),
