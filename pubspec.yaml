@@ -39,6 +39,11 @@ dependencies:
   light: ^4.1.0
   flutter_tilt: ^3.2.0
   flutter_bloc: ^9.1.0
+  flutter_map: ^8.1.1
+  geolocator: ^13.0.2
+  flutter_map_location_marker: ^10.0.0
+  flutter_rotation_sensor: ^0.1.1
+  latlong2: ^0.9.1
 
 dev_dependencies:
   flutter_test:
