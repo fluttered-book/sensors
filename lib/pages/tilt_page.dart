@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
+import '../widgets/app_drawer.dart';
+
 class TiltPage extends StatelessWidget {
   const TiltPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Tilt"),
+      ),
+      drawer: AppDrawer(),
       body: Center(
         child: Tilt(
           childLayout: ChildLayout(
