@@ -38,6 +38,7 @@ dependencies:
   community_charts_flutter: ^1.0.4
   light: ^4.1.0
   flutter_tilt: ^3.2.0
+  flutter_bloc: ^9.1.0
 
 dev_dependencies:
   flutter_test:

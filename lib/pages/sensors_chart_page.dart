@@ -16,9 +16,14 @@ class SensorsChartPage extends StatelessWidget {
           height: 200,
           child: SensorStreamChart(
             key: Key('accelerometer'),
-            stream: accelerometerEventStream()
-                .map((e) => (x: e.x, y: e.y, z: e.z, timestamp: e.timestamp)),
-            maxDataPoints: 50,
+            stream: accelerometerEventStream().map(
+              (e) => (
+                x: e.x,
+                y: e.y,
+                z: e.z,
+                timestamp: e.timestamp.millisecondsSinceEpoch
+              ),
+            ),
           ),
         ),
         Divider(),
@@ -27,9 +32,12 @@ class SensorsChartPage extends StatelessWidget {
           height: 200,
           child: SensorStreamChart(
             key: Key('user-accelerometer'),
-            stream: userAccelerometerEventStream()
-                .map((e) => (x: e.x, y: e.y, z: e.z, timestamp: e.timestamp)),
-            maxDataPoints: 50,
+            stream: userAccelerometerEventStream().map((e) => (
+                  x: e.x,
+                  y: e.y,
+                  z: e.z,
+                  timestamp: e.timestamp.millisecondsSinceEpoch
+                )),
           ),
         ),
         Divider(),
@@ -38,9 +46,14 @@ class SensorsChartPage extends StatelessWidget {
           height: 200,
           child: SensorStreamChart(
             key: Key('gyroscope'),
-            stream: gyroscopeEventStream()
-                .map((e) => (x: e.x, y: e.y, z: e.z, timestamp: e.timestamp)),
-            maxDataPoints: 50,
+            stream: gyroscopeEventStream().map(
+              (e) => (
+                x: e.x,
+                y: e.y,
+                z: e.z,
+                timestamp: e.timestamp.millisecondsSinceEpoch
+              ),
+            ),
           ),
         ),
         Divider(),
@@ -49,12 +62,16 @@ class SensorsChartPage extends StatelessWidget {
           height: 200,
           child: SensorStreamChart(
             key: Key('magnetometer'),
-            stream: magnetometerEventStream()
-                .map((e) => (x: e.x, y: e.y, z: e.z, timestamp: e.timestamp)),
-            maxDataPoints: 50,
+            stream: magnetometerEventStream().map(
+              (e) => (
+                x: e.x,
+                y: e.y,
+                z: e.z,
+                timestamp: e.timestamp.millisecondsSinceEpoch
+              ),
+            ),
           ),
         ),
-        Divider(),
       ]),
     );
   }
