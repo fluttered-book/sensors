@@ -26,6 +26,7 @@ class SensorSliders extends StatelessWidget {
               max: max,
               onChanged: (_) {},
             ),
+            Text("x: ${point.x}"),
             Slider(
               activeColor: Colors.green,
               value: point.y.clamp(min, max),
@@ -33,6 +34,7 @@ class SensorSliders extends StatelessWidget {
               max: max,
               onChanged: (_) {},
             ),
+            Text("y: ${point.y}"),
             Slider(
               activeColor: Colors.blue,
               value: point.z.clamp(min, max),
@@ -40,6 +42,7 @@ class SensorSliders extends StatelessWidget {
               max: max,
               onChanged: (_) {},
             ),
+            Text("z: ${point.z}"),
           ],
         );
       },
