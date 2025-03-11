@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sensors/widgets/header.dart';
-import 'package:sensors/widgets/sensor_chart.dart';
 import 'package:sensors_plus/sensors_plus.dart';
+
+import '../../../common/widgets/header.dart';
+import 'sensor_chart.dart';
 
 class SensorsChartPage extends StatelessWidget {
   const SensorsChartPage({super.key});
@@ -14,7 +15,7 @@ class SensorsChartPage extends StatelessWidget {
         Header("Accelerometer m/s2"),
         SizedBox(
           height: 200,
-          child: SensorStreamChart(
+          child: SensorChart(
             key: Key('accelerometer'),
             stream: accelerometerEventStream().map(
               (e) => (
@@ -30,7 +31,7 @@ class SensorsChartPage extends StatelessWidget {
         Header("User Accelerometer m/s2"),
         SizedBox(
           height: 200,
-          child: SensorStreamChart(
+          child: SensorChart(
             key: Key('user-accelerometer'),
             stream: userAccelerometerEventStream().map((e) => (
                   x: e.x,
@@ -44,7 +45,7 @@ class SensorsChartPage extends StatelessWidget {
         Header("Gyroscope"),
         SizedBox(
           height: 200,
-          child: SensorStreamChart(
+          child: SensorChart(
             key: Key('gyroscope'),
             stream: gyroscopeEventStream().map(
               (e) => (
@@ -60,7 +61,7 @@ class SensorsChartPage extends StatelessWidget {
         Header('Magnetometer (μT)'),
         SizedBox(
           height: 200,
-          child: SensorStreamChart(
+          child: SensorChart(
             key: Key('magnetometer'),
             stream: magnetometerEventStream().map(
               (e) => (

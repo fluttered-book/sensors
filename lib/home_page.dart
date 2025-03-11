@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sensors/widgets/app_drawer.dart';
+
+import 'common/widgets/app_drawer.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,7 +10,10 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("Home")),
       drawer: const AppDrawer(),
-      body: Text("Demo app for various sensors found in phones"),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text("Demo app for various sensors found in phones"),
+      ),
     );
   }
 }

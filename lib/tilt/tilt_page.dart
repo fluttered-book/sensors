@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tilt/flutter_tilt.dart';
 
-import '../widgets/app_drawer.dart';
+import '../common/widgets/app_drawer.dart';
 
 class TiltPage extends StatelessWidget {
   const TiltPage({super.key});
@@ -29,7 +29,7 @@ class TiltPage extends StatelessWidget {
               ),
               Positioned(
                 child: TiltParallax(
-                  size: Offset(-20.0, -20.0),
+                  size: Offset(-50.0, -50.0),
                   child: FilledButton(onPressed: () {}, child: Text("Go!")),
                 ),
               ),

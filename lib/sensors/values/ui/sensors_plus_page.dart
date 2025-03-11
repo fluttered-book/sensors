@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sensors/widgets/header.dart';
-import 'package:sensors/widgets/sensor_sliders.dart';
 import 'package:sensors_plus/sensors_plus.dart';
 
-import '../widgets/app_drawer.dart';
+import '../../../common/widgets/app_drawer.dart';
+import '../../../common/widgets/header.dart';
+import 'sensor_sliders.dart';
 
 class SensorsPlusPage extends StatelessWidget {
   const SensorsPlusPage({super.key});

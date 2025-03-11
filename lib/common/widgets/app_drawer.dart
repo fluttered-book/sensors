@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:sensors/pages/light_page.dart';
-import 'package:sensors/pages/sensors_chart_page.dart';
 import 'package:sensors/pages/tilt_page.dart';
 
-import '../pages/home_page.dart';
-import '../pages/sensors_plus_page.dart';
+import '../../pages/home_page.dart';
+import '../../sensors/chart/ui/sensors_chart_page.dart';
+import '../../sensors/values/ui/sensors_plus_page.dart';
 
 // https://docs.flutter.dev/cookbook/design/drawer
 
