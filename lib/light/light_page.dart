@@ -10,6 +10,7 @@ class LightPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
+    _light.lightSensorStream.forEach((value) => print(value));
     return Scaffold(
       appBar: AppBar(title: Text("Light")),
       body: Padding(
@@ -33,20 +34,6 @@ class LightPage extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class LightWidget extends StatefulWidget {
-  const LightWidget({super.key});
-
-  @override
-  State<LightWidget> createState() => _LightWidgetState();
-}
-
-class _LightWidgetState extends State<LightWidget> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
 
