@@ -49,23 +49,25 @@ class SensorsPlusPage extends StatelessWidget {
             min: -50,
             max: 50,
           ),
-          //Divider(),
-          //Header('Barometer'),
-          //StreamBuilder(
-          //  stream: barometerEventStream(),
-          //  builder: (context, snapshot) =>
-          //      snapshot.hasData && snapshot.data?.pressure != null
-          //          ? Column(
-          //              children: [
-          //                Slider(
-          //                  value: snapshot.data!.pressure,
-          //                  onChanged: (_) {},
-          //                ),
-          //                Text(snapshot.data!.timestamp.toIso8601String())
-          //              ],
-          //            )
-          //          : Center(child: Text("No data")),
-          //),
+          Divider(),
+          Header('Barometer'),
+          StreamBuilder(
+            stream: barometerEventStream(),
+            builder: (context, snapshot) =>
+                snapshot.hasData && snapshot.data?.pressure != null
+                    ? Column(
+                        children: [
+                          Slider(
+                            min: 0,
+                            max: 2000,
+                            value: snapshot.data!.pressure,
+                            onChanged: (_) {},
+                          ),
+                          Text(snapshot.data!.pressure.toString())
+                        ],
+                      )
+                    : Center(child: Text("No data")),
+          ),
         ],
       ),
     );
