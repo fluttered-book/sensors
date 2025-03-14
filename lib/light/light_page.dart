@@ -10,7 +10,6 @@ class LightPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    _light.lightSensorStream.forEach((value) => print(value));
     return Scaffold(
       appBar: AppBar(title: Text("Light")),
       body: Padding(
